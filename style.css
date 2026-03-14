@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f5f7;
+    margin: 0;
+    padding: 40px;
+}
+
+.cv {
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+}
+
+header.header-flex {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.header-left {
+    flex: 1;
+}
+
+header h2, a {
+    color: #3b6ea5;
+    font-weight: normal;
+}
+
+.contact-icon {
+    height: 19px;
+    width: 19px;
+    margin-left: 6px;
+}
+
+.contact-detail {
+    display: inline-flex;
+    gap: 3px;
+}
+
+.image-placeholder {
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.right section {
+    margin-bottom: 30px;
+}
+
+.skill-group {
+    margin-bottom: 12px;
+}
+.skill-group p {
+    margin: 4px 0 0 0;
+}
+
+.simple {
+    list-style: none;
+    padding: 0;
+}
+.simple li {
+    margin-bottom: 6px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+@media print {
+    body {
+        padding: 0;
+        margin: 0;
+        background: none;
+    }
+    .cv {
+        max-width: 210mm;
+        width: 210mm;
+        min-height: 297mm;
+        height: 297mm;
+        margin: 0;
+        padding: 0;
+        background: white;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+    }
+    .content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 8px;
+        margin-top: 10mm;
+    }
+    .image-placeholder {
+        width: 40mm;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 8mm;
+    }
+    .image-placeholder img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    .right {
+        padding-left: 8px;
+        border-left: 1px solid #e3e6ea;
+    }
+    @page {
+        size: A4;
+        margin: 10mm;
+    }
+}
